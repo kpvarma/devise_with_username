@@ -1,0 +1,25 @@
+<div class="container" align="center">
+	<div class="row" align="center">
+		<div class="well" style='max-width:400px;margin-top:0px;'>
+			<h4 class="form-heading">Welcome Home!</h4>
+				<% if signed_in? %>
+					<div>Hi <%= current_user.name %>,</div>
+					<div class="cl-10"></div>
+					<p>Welcome Home.</p>
+				<% end %>
+				<div class="cl-10"></div>
+				<p>RailsTemplates - A Basic Rails Starter Kit plugged with device authentication with username or email.</p>
+		</div>
+	</div>
+</div>
+
+<div class="container" align="center">
+	<div class="row" align="center">
+		<div class="well" style='max-width:400px;margin-top:0px;'>
+			<h4 class="form-heading">Login or Sign Up</h4>
+			<%= link_to "Sign in", new_user_session_path, :class=>"btn btn-primary float-left" %>
+			<%= link_to "Sign up", new_user_registration_path, :class=>"btn btn-danger float-right" %>
+			<div class="cl"></div>
+		</div>
+	</div>
+</div>
